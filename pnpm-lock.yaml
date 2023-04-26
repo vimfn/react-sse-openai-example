@@ -20,8 +20,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   sse:
-    specifier: ^0.0.8
-    version: 0.0.8
+    specifier: github:mpetazzoni/sse.js
+    version: github.com/mpetazzoni/sse.js/cfe70a36d49009e403e1cd2419b097497ab693da
 
 devDependencies:
   '@types/react':
@@ -2804,11 +2804,6 @@ packages:
       word-wrap: 1.2.3
     dev: true
 
-  /options@0.0.6:
-    resolution: {integrity: sha512-bOj3L1ypm++N+n7CEbbe473A414AB7z+amKYshRb//iuL3MpdDCLhPnw6aVTdKB9g5ZRVHIEp8eUln6L2NUStg==}
-    engines: {node: '>=0.4.0'}
-    dev: false
-
   /p-limit@3.1.0:
     resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
     engines: {node: '>=10'}
@@ -3110,13 +3105,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /sse@0.0.8:
-    resolution: {integrity: sha512-cviG7JH31TUhZeaEVhac3zTzA+2FwA7qvHziAHpb7mC7RNVJ/RbHN+6LIGsS2ugP4o2H15DWmrSMK+91CboIcg==}
-    engines: {node: '>=0.4.0'}
-    dependencies:
-      options: 0.0.6
-    dev: false
-
   /string.prototype.matchall@4.0.8:
     resolution: {integrity: sha512-6zOCOcJ+RJAQshcTvXPHoxoQGONa3e/Lqx90wUA+wEzX78sg5Bo+1tQo4N0pohS0erG9qtCqJDjNCQBjeWVxyg==}
     dependencies:
@@ -3360,3 +3348,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  github.com/mpetazzoni/sse.js/cfe70a36d49009e403e1cd2419b097497ab693da:
+    resolution: {tarball: https://codeload.github.com/mpetazzoni/sse.js/tar.gz/cfe70a36d49009e403e1cd2419b097497ab693da}
+    name: sse.js
+    version: 0.6.1
+    dev: false

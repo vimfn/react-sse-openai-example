@@ -16,7 +16,7 @@
     "framer-motion": "^10.12.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sse": "^0.0.8"
+    "sse": "github:mpetazzoni/sse.js"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
