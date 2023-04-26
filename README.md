@@ -1,4 +1,4 @@
-# 🤖 React SSE OpenAI
+# 🤖 React SSE OpenAI Example
 
 ![comp-demo](https://user-images.githubusercontent.com/102473837/234518800-50d67f9e-53f9-4a25-ba81-81d2ba974165.gif)
 
@@ -7,7 +7,7 @@
 1. **Clone the repo**
 
     ```shell
-    git clone https://github.com/its-ag/react-sse-openai
+    git clone https://github.com/its-ag/react-sse-openai-example
     ```
 
 2. **Install dependencies**
