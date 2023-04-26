@@ -4,7 +4,6 @@ import { SSE } from "sse";
 import { useToast } from "@chakra-ui/react";
 
 const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
-console.log(API_KEY);
 
 function App() {
   let [prompt, setPrompt] = useState("");
@@ -30,7 +29,8 @@ function App() {
   let handleSubmitBtnClicked = async () => {
     if (prompt === "") {
       toast({
-        // title: "Error",
+        // title: API_KEY == undefined ? "API Key is not set" : "Prompt is empty",
+        title: "Prompt is empty",
         description: "Please enter a prompt",
         status: "error",
         duration: 2000,
@@ -59,12 +59,12 @@ function App() {
       });
 
       source.addEventListener("message", (e) => {
-        console.log("Message: ", e.data);
+        // console.log("Message: ", e.data);
         if (e.data != "[DONE]") {
           let payload = JSON.parse(e.data);
           let text = payload.choices[0].text;
           if (text != "\n") {
-            console.log("Text: ", text);
+            // console.log("Text: ", text);
             responseRef.current += text;
             setResponse(responseRef.current);
           } else {
@@ -74,11 +74,20 @@ function App() {
       });
 
       source.addEventListener("readystatechange", (e) => {
-        if (e.readyState >= 2) {
-          setIsLoading(false);
+      if (e.readyState >= 2) {
+        setIsLoading(false);
+        // console.log(source.status);
+        if (source.status === undefined) {
+          toast({
+            title: "API Key is not set",
+            description: "Please check your API key and try again.",
+            status: "error",
+            duration: 2000,
+            isClosable: true,
+          });
         }
-      });
-
+      }
+    });
       source.stream();
     }
   };
